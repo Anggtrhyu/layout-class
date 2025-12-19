@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Corps Dossier - Levi Ackerman</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Special+Elite&display=swap" rel="stylesheet">
+    <style>
+        /* Reset Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Warna latar belakang cokelat tua kertas tua */
+            background-color: #1a1512;
+            background-image: url('https://www.transparenttextures.com/patterns/dark-leather.png');
+            font-family: 'Special Elite', cursive; /* Font gaya mesin ketik */
+            color: #d9c5b2;
+            padding: 20px;
+        }
+
+        /* --- 1. Header (Gaya Spanduk Militer) --- */
+        .header {
+            background-color: #2d3e2d; /* Hijau Survey Corps */
+            color: #fff;
+            padding: 25px;
+            text-align: center;
+            border: 4px solid #d9c5b2;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .header h1 {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 5px;
+            text-shadow: 2px 2px #000;
+        }
+
+        /* --- 2. Container Utama --- */
+        .container {
+            display: flex;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- 3. Sidebar (Profil Foto) --- */
+        .sidebar {
+            background-color: #2a241f;
+            width: 30%;
+            padding: 20px;
+            border: 2px solid #4a3f35;
+            text-align: center;
+        }
+
+        .profile-frame {
+            border: 5px solid #d9c5b2;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            background-color: #000;
+        }
+
+        .profile-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Agar foto Levi tidak gepeng */
+            filter: sepia(30%) contrast(110%); /* Efek foto lama */
+        }
+
+        .rank-box {
+            background-color: #8b0000; /* Merah gelap */
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 1.1em;
+            border-radius: 3px;
+        }
+
+        /* --- 4. Main Content (Area Informasi) --- */
+        .main-content {
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 15px;
+        }
+
+        /* --- 5. Kotak Konten (Gaya Dokumen) --- */
+        .card {
+            background-color: #e8d5b5; /* Warna kertas tua */
+            color: #2a241f;
+            padding: 20px;
+            border: 1px solid #bc9d7a;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        /* Efek Stempel pada kartu */
+        .card::before {
+            content: "TOP SECRET";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: 2px solid #8b0000;
+            color: #8b0000;
+            padding: 2px 5px;
+            font-size: 0.7em;
+            transform: rotate(15deg);
+            opacity: 0.5;
+        }
+
+        .card h3 {
+            border-bottom: 2px solid #2d3e2d;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            font-family: 'Cinzel', serif;
+        }
+
+        .card p {
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        /* Responsif untuk HP */
+        @media (max-width: 768px) {
+            .container { flex-direction: column; }
+            .sidebar { width: 100%; }
+            .main-content { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>SURVEY CORPS DOSSIER</h1>
+        <p>Humanity's Freedom - Wings of Liberty</p>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile-frame">
+                <img src="https://images.alphacoders.com/131/1313495.png" alt="Levi Ackerman">
+            </div>
+            <h2 style="font-family: 'Cinzel';">LEVI ACKERMAN</h2>
+            <div class="rank-box">CAPTAIN (HEICHOU)</div>
+            <p style="margin-top: 15px; font-size: 0.8em; color: #888;">ID: SC-001-ACK</p>
+        </aside>
+
+        <div class="main-content">
+            <div class="card">
+                <h3>Bio Data</h3>
+                <p><strong>Lahir:</strong> 25 Desember</p>
+                <p><strong>Tinggi:</strong> 160 cm</p>
+                <p><strong>Keahlian:</strong> God-tier ODM Maneuver, Strategi Tempur.</p>
+            </div>
+            <div class="card">
+                <h3>Combat Stats</h3>
+                <p><strong>Strength:</strong> 10/10</p>
+                <p><strong>Agility:</strong> 12/10</p>
+                <p><strong>Cleanliness:</strong> 100/10</p>
+            </div>
+            <div class="card">
+                <h3>Achievements</h3>
+                <p>Melumpuhkan Beast Titan secara tunggal. Pemimpin Pasukan Operasi Khusus yang paling disegani.</p>
+            </div>
+            <div class="card">
+                <h3>Notes</h3>
+                <p>"Kematian rekan kerja bukanlah kesia-siaan, melainkan motivasi untuk terus maju melampaui tembok."</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html># layout-class
